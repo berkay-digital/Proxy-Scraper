@@ -2,6 +2,8 @@
 
 Proxy Scraper is a Python-based project that scrapes and validates HTTP proxies from various sources. It uses the `requests` library to fetch proxy lists and then validates each proxy to ensure it's working.
 
+![Demo](https://cdn.discordapp.com/attachments/853203826600181790/1194213449174110238/scraperr.gif)
+
 ## Project Structure
 
 The main script of the project is located in `main.py`. This script performs the scraping and validation of proxies. The validated proxies are then written to a file named `proxies.txt`.
