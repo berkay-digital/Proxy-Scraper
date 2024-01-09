@@ -32,4 +32,4 @@ Future improvements to the project could include adding more sources for proxy l
 Contributions to the project are welcome. If you have a feature request, bug report, or want to improve the code, feel free to open an issue or submit a pull request.
 
 ## License
-This project is open source and available under the MIT License.
+This project is open source and available under the [MIT License](LICENSE).
