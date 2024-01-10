@@ -7,7 +7,7 @@ on:
         description: 'Test scenario'
         required: false
   schedule:
-    - cron: '30 5,17 * * *'
+    - cron: '0 4,10,16,22 * * *'
 
 permissions:
   contents: write
