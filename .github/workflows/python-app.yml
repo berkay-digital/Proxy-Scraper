@@ -1,6 +1,11 @@
 name: Check New Proxies
 
-on:
+on: 
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Test scenario'
+        required: false
   schedule:
     - cron: '30 5,17 * * *'
 
