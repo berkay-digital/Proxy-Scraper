@@ -2,21 +2,16 @@ import requests
 import time
 from termcolor import colored
 
-timeout = "2000"
-url = "https://api.proxyscrape.com/v2"
+timeout = "3000"
+url = "https://api.proxyscrape.com/v3/free-proxy-list/get"
 url2 = "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt"
 
 querystring = {
     "request": "displayproxies",
     "protocol": "http",
     "timeout": f"{timeout}",
-    "country": "all",
-    "ssl": "all",
-    "anonymity": "all",
-    "simplified": "true",
 }
 
-payload = ""
 headers = {
     "accept": "text/plain, */*; q=0.01",
     "accept-language": "en-US,en;q=0.8",
@@ -24,10 +19,10 @@ headers = {
 }
 
 response = requests.request(
-    "GET", url, data=payload, headers=headers, params=querystring
+    "GET", url, headers=headers, params=querystring
 )
-response2 = requests.request("GET", url2, data=payload, headers=headers)
-
+response2 = requests.request("GET", url2, headers=headers)
+print(response.text)
 proxies = []
 proxies.extend(response.text.split("\n"))
 proxies.extend(response2.text.split("\n"))
