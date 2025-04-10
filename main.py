@@ -22,7 +22,9 @@ print(response2.text)
 proxies = []
 proxies.extend(response.text.split("\n"))
 proxies.extend(response2.text.split("\n"))
-print("Amount of proxies:", len(proxies))
+
+proxies = list(set(filter(None, proxies)))
+print("Amount of proxies after removing duplicates:", len(proxies))
 time.sleep(3)
 
 
