@@ -3,14 +3,9 @@ import time
 from termcolor import colored
 
 timeout = "3000"
-url = "https://api.proxyscrape.com/v3/free-proxy-list/get"
+url = "https://api.proxyscrape.com/v4/free-proxy-list/get?request=display_proxies&protocol=http&proxy_format=ipport&format=text&timeout=20000"
 url2 = "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt"
 
-querystring = {
-    "request": "displayproxies",
-    "protocol": "http",
-    "timeout": f"{timeout}",
-}
 
 headers = {
     "accept": "text/plain, */*; q=0.01",
@@ -19,10 +14,11 @@ headers = {
 }
 
 response = requests.request(
-    "GET", url, headers=headers, params=querystring
+    "GET", url, headers=headers
 )
 response2 = requests.request("GET", url2, headers=headers)
 print(response.text)
+print(response2.text)
 proxies = []
 proxies.extend(response.text.split("\n"))
 proxies.extend(response2.text.split("\n"))
