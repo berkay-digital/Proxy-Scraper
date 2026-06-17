@@ -2,7 +2,7 @@
 
 Proxy Scraper is a Python-based project that scrapes and validates HTTP proxies from various sources. It automatically updates [proxies.txt](proxies.txt) every six hours so you can use it in your code. Don't forget to use the [raw version](https://raw.githubusercontent.com/berkay-digital/Proxy-Scraper/main/proxies.txt).
 
-![Demo](https://cdn.discordapp.com/attachments/853203826600181790/1194217286916128808/scraper_3.gif)
+![Demo](preview.gif)
 
 ## Project Structure
 
