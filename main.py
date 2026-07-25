@@ -20,8 +20,8 @@ response2 = requests.request("GET", url2, headers=headers)
 print(response.text)
 print(response2.text)
 proxies = []
-proxies.extend(response.text.split("\n"))
-proxies.extend(response2.text.split("\n"))
+proxies.extend(response.text.splitlines())
+proxies.extend(response2.text.splitlines())
 
 proxies = list(set(filter(None, proxies)))
 print("Amount of proxies after removing duplicates:", len(proxies))
